@@ -38,3 +38,36 @@ footer{
     background-color: #203040;
     color:#fff;
 }
+
+
+/* Common */
+a{
+    text-decoration: none;
+}
+a:hover{
+    color:#ff8000;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+}
+/* Header */
+header a{
+    color:#fff;
+    padding: 1rem;;
+}
+a.brand{
+    color:#fff;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Footer */
+.row.center{
+    justify-content: center;
+}
+
+
