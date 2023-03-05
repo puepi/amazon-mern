@@ -1,6 +1,6 @@
 // import product from './images/p1.jpg';
 // import './App.css';
-import  { BrowserRouter,Route } from 'react-router-dom'
+import  { BrowserRouter,Link,Route } from 'react-router-dom'
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 
@@ -13,13 +13,13 @@ function App() {
                     <a className="brand" href="/">amazona</a>
                 </div>
                 <div>
-                    <a href="/cart">Cart</a>
-                    <a href="signin">Sign In</a>
+                    <Link to="/cart">Cart</Link>
+                    <Link to="signin">Sign In</Link>
                 </div>
             </header>
             <main>
                 <Route path='/product/:id' component={ProductScreen}></Route>
-                <Route exact path='/' component={HomeScreen}></Route>
+                <Route exact={true} path='/' component={HomeScreen}></Route>
             </main>
             <footer className="row center">
                 All rights reserved
