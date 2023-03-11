@@ -18,7 +18,7 @@ function App() {
                 </div>
             </header>
             <main>
-                <Route path='/product/:id' component={ProductScreen}></Route>
+                <Route path='/products/:id' component={ProductScreen}></Route>
                 <Route exact={true} path='/' component={HomeScreen}></Route>
             </main>
             <footer className="row center">

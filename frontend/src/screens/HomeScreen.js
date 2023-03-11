@@ -14,16 +14,19 @@ const HomeScreen = () => {
     dispatch(listProducts())
   },[])
   return (
-    
-      loading ? <LoadingBox /> :
-      error ? <MessageBox variant="danger">{error}</MessageBox>:
-        <div className="row center">
-          {
-              products.map((product)=>(
-                  <Product  key={product._id} product={product}/>
-              ))
-          }
-        </div>
+    <div>
+      {
+        loading ? <LoadingBox /> :
+        error ? <MessageBox variant="danger">{error}</MessageBox>:
+          <div className="row center">
+            {
+                products.map((product)=>(
+                    <Product  key={product._id} product={product}/>
+                ))
+            }
+          </div>
+      }
+    </div>
   )
 }
 

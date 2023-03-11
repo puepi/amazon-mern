@@ -5,11 +5,11 @@ const Product = ({product}) => {
   console.log(product._id)
   return (
     <div className="card">
-        <a href={`/product/${product._id}`}>
+        <a href={`/products/${product._id}`}>
             <img className="medium" src={product.image} alt="product"/>
         </a>
         <div className="card-body">
-            <a href={`/product/{product._id}`}>
+            <a href={`/products/{product._id}`}>
                 <h2>{product.name}</h2>
             </a>
             <Rating rating={product.rating} nbReviews={product.numReviews}/>

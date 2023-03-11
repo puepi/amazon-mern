@@ -2,13 +2,14 @@
 import {legacy_createStore as createStore,compose,applyMiddleware, combineReducers} from 'redux'
 // import configureStore from 'reduxjs/toolkit'
 import thunk from 'redux-thunk'
-import { productReducer } from './reducers/productReducer.js'
+import { productDetailsReducer, productReducer } from './reducers/productReducer.js'
 
 
 const initialState={}
 
 const reducer=combineReducers({
-    productList:productReducer
+    productList:productReducer,
+    productDetails:productDetailsReducer
 })
 
 const composeEnhancer=window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
