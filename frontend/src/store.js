@@ -1,16 +1,15 @@
-import data from './data.js'
-import {legacy_createStore as createStore,compose,applyMiddleware} from 'redux'
+// import data from './data.js'
+import {legacy_createStore as createStore,compose,applyMiddleware, combineReducers} from 'redux'
 // import configureStore from 'reduxjs/toolkit'
 import thunk from 'redux-thunk'
+import { productReducer } from './reducers/productReducer.js'
 
 
 const initialState={}
 
-const reducer=(state,action)=>{
-    return {
-        products:data.products
-    }
-}
+const reducer=combineReducers({
+    productList:productReducer
+})
 
 const composeEnhancer=window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store=createStore(reducer,initialState,composeEnhancer(applyMiddleware(thunk)))
